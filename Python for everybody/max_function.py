@@ -1,1 +1,0 @@
-# A function is some stored code that we use. A function takes some input and produces an output
