@@ -1,5 +1,5 @@
 # A function is some stored code that we use. A function takes some input and produces an output
-def computepay(h, r):
+def computePay(h, r):
     if h > 40:
         regular_payment = r * 40
         overtime_payment = (h-40) * (r * 1.5)
@@ -7,5 +7,5 @@ def computepay(h, r):
         return total_payment
 hrs = float(input("Enter Hours:"))
 rate = float(input("Enter rate: "))
-p = computepay(hrs,rate)
+p = computePay(hrs,rate)
 print("Pay",p)
