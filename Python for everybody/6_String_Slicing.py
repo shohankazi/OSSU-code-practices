@@ -128,11 +128,29 @@ lstrip() and rstrip()remove whitespace at the left or right.
 strip() removes both beginning and ending whitespace.
 """
 
-greet = '   Hello Bob   '
-print(greet.lstrip())
-print(greet.rstrip())
-print(greet.strip())
+# greet = '   Hello Bob   '
+# print(greet.lstrip())
+# print(greet.rstrip())
+# print(greet.strip())
 # greet.rstrip()
 # print(greet)
 # greet.strip()
 # print(greet)
+
+# Prefixes
+
+""" 
+line = 'Please have a nice day'
+print(line.startswith('Please'))
+print(line.startswith('p'))
+"""
+
+# Parsing and extracting
+
+data = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008'
+atTheRate_pos = data.find('@')
+print(atTheRate_pos)
+space_pos = data.find(' ',atTheRate_pos)
+print(space_pos)
+host = data[atTheRate_pos+1 : space_pos]
+print(host)
