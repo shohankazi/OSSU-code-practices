@@ -59,13 +59,13 @@ Python has a number of string functions which are in the string library.
 These functions are already built into every string - we invoke them by appending the function to the string variable. 
 These functions do not modify the original string, instead they return a new string that has been altered.
 """
-greet = 'Hello bob'
-zap = greet.lower()
+# greet = 'Hello bob'
+# zap = greet.lower()
 # print(zap)
 # print(greet)
 # print('Hi there'.lower())
 
-stuff = 'Hello world'
+# stuff = 'Hello world'
 # print(type(stuff))
 # print(dir(stuff))
 
@@ -89,11 +89,11 @@ find() finds the occurrence of the substring.
 If the substring is not found, find() returns -1
 Remember that string position starts at 0.
 """
-fruit = 'banana'
-pos = fruit.find('na')
-print(pos)
-aa = fruit.find('z')
-print(aa)
+# fruit = 'banana'
+# pos = fruit.find('na')
+# print(pos)
+# aa = fruit.find('z')
+# print(aa)
 
 # make everything UPPERCASE
 """ 
@@ -101,8 +101,38 @@ You can make a copy of a string in lower case or upper case.
 Often when we are searching for a string using find() we first convert the string to lower case so we can search a string regardless of case.
 """
 
+""" 
 greet = 'Hello Bob'
 nnn = greet.upper()
 print(nnn)
 www = greet.lower()
-print(www)
+print(www) 
+"""
+
+# Search and replace
+
+""" 
+The replace() function is like a "search and replace" operation in a word processor.
+It replaces all occurrences of the search string with the replacement string.
+"""
+# greet = 'Hello Bob'
+# nstr = greet.replace('Bob','Jane')
+# print(nstr)
+# nstr = greet.replace('o','x')
+# print(nstr)
+
+# Stripping Whitespace
+""" 
+Sometimes we want to take a string and remove whitespace at the beginning and/or end.
+lstrip() and rstrip()remove whitespace at the left or right.
+strip() removes both beginning and ending whitespace.
+"""
+
+greet = '   Hello Bob   '
+print(greet.lstrip())
+print(greet.rstrip())
+print(greet.strip())
+# greet.rstrip()
+# print(greet)
+# greet.strip()
+# print(greet)
