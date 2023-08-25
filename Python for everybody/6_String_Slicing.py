@@ -182,12 +182,24 @@ Take the following python code that stores a string:
 str = 'X-DSPAM-Confidence: 0.8475 '
 Use find and string slicing to extract the portion of the string after the colon character and then use the float function to convert the extracted string into a floating point number.
 """
-str = 'X-DSPAM-Confidence: 0.8475'
-i_pos = str.find(':')
+# str = 'X-DSPAM-Confidence: 0.8475'
+# i_pos = str.find(':')
 # print(i_pos)
-piece = str[i_pos+2:]
+# piece = str[i_pos+2:]
 # print(piece)
-value = float(piece)
-print(value)
+# value = float(piece)
+# print(value)
 
 # print(value+10)
+
+
+# Exercise 6.5
+
+""" 
+text = "X-DSPAM-Confidence:    0.8475"
+i_pos = text.find(':')
+extracted_value = text[i_pos+1:]
+space_cleared = extracted_value.strip()
+new_number = float(space_cleared)
+print(new_number) 
+"""
