@@ -42,3 +42,28 @@ for line in fhand :
     if line.startswith("From:") :
         print(line)
         
+# bad file names 
+fname = input('Enter the filename: ')
+try:
+    fhand = open(fname)
+except:
+    print('File cannot be opened: ',fname)
+    quit()
+count = 0
+for line in fhand:
+    if line.startswith('Subject: '):
+        count = count + 1
+print('There were',count,'subject lines in',fname)
+
+
+# Summary
+
+""" 
+1.  Secondary Shortage
+2.  Opening a file - file handle
+3.  File structure - newline character
+4.  Reading a file line by line with a for loop
+5.  Searching for lines
+6.  Reading file names
+7.  Dealing with bad files
+"""
