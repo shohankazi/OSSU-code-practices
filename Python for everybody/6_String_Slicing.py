@@ -175,3 +175,19 @@ print(host)
 12. Stripping white space
 """
 
+# Worked Exercise
+
+""" 
+Take the following python code that stores a string:
+str = 'X-DSPAM-Confidence: 0.8475 '
+Use find and string slicing to extract the portion of the string after the colon character and then use the float function to convert the extracted string into a floating point number.
+"""
+str = 'X-DSPAM-Confidence: 0.8475'
+i_pos = str.find(':')
+# print(i_pos)
+piece = str[i_pos+2:]
+# print(piece)
+value = float(piece)
+print(value)
+
+# print(value+10)
