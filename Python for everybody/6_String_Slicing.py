@@ -147,10 +147,31 @@ print(line.startswith('p'))
 
 # Parsing and extracting
 
+""" 
 data = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008'
 atTheRate_pos = data.find('@')
 print(atTheRate_pos)
 space_pos = data.find(' ',atTheRate_pos)
 print(space_pos)
 host = data[atTheRate_pos+1 : space_pos]
-print(host)
+print(host) 
+"""
+
+# In python 3, all strings are unicode
+
+# Summary
+""" 
+1. String Type
+2. Read/Convert
+3. Indexing Strings
+4. Slicing strings
+5. Looping through strings with for and while
+6. Concatenating strings with +
+7. String operations
+8. String library
+9. String comparisons
+10. Searching in strings
+11. Replacing Text
+12. Stripping white space
+"""
+
