@@ -209,3 +209,32 @@ Split breaks a string into parts and produces a list of strings. We think of the
 9. Splitting strings into lists of words
 10. Using split to parse strings.
 """
+
+
+# Exercise 8.4
+
+""" fname = input('Enter file name: ')
+f_handler = open(fname)
+unique = list()
+for line in f_handler:
+    list = line.split()
+    for word in list:
+        if word not in unique:
+            unique.append(word)
+            unique.sort()
+print(unique)
+"""
+
+# Exercise 8.5
+
+"""
+f_name = open('mbox.txt')
+count = 0 
+for line in f_name:
+    if line.startswith('From: ') :
+        parsed_line = line.split()
+        count = count + 1
+        print(parsed_line[1])
+        # print(line)
+print(f"There were {count} lines in the file with From as the first word") 
+"""
