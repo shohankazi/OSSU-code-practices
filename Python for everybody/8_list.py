@@ -117,7 +117,18 @@
 2. These are logical operators that return True or False
 3. They do not modify the list
 """
-some = [1,9,21,10,16]
-print(9 in some)
-print(15 in some)
-print(20 not in some)
+# some = [1,9,21,10,16]
+# print(9 in some)
+# print(15 in some)
+# print(20 not in some)
+
+# Lists are in order
+""" 
+1. A list can hold many items and keeps those items in the order until we do something to change the order
+2. A list can be sorted (i.e., change its order)
+3. The sort method (unlike in strings) means "sort yourself"
+"""
+friends = ['Joseph', 'Glenn', 'Sally']
+friends.sort()
+print(friends)
+print(friends[1])
