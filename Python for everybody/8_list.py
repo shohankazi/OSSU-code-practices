@@ -98,3 +98,15 @@
 # x = list()
 # print(type(x))
 # print(dir(x))
+
+# Building a list from scratch
+""" 
+1. We can create empty list and then add elements using the append method.
+2. The list stays in order and new elements are added at the end of the list.
+"""
+# stuff = list()
+# stuff.append('book')
+# stuff.append(99)
+# print(stuff)
+# stuff.append('cookie')
+# print(stuff)
