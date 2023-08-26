@@ -128,7 +128,84 @@
 2. A list can be sorted (i.e., change its order)
 3. The sort method (unlike in strings) means "sort yourself"
 """
-friends = ['Joseph', 'Glenn', 'Sally']
-friends.sort()
-print(friends)
-print(friends[1])
+# friends = ['Joseph', 'Glenn', 'Sally']
+# friends.sort()
+# print(friends)
+# print(friends[1])
+
+# Built in functions and lists
+""" 
+1. There are a number of functions built into python that take lists as parameters.
+2. Remember the loops we built? These are much simpler. 
+"""
+# nums = [10,20,30,40,50]
+# print(len(nums))
+# print(max(nums))
+# print(min(nums))
+# print(sum(nums))
+# print(sum(nums)/len(nums))
+
+# numlist = list()
+# while True :
+#     inp = input('Enter a number: ')
+#     if inp == 'done':
+#         break
+#     value = float(inp)
+#     numlist.append(value)
+# average = sum(numlist) / len(numlist)
+# print('Average: ',average)
+
+# Best friends: Strings and lists
+""" 
+Split breaks a string into parts and produces a list of strings. We think of these as words. We can access a particular word or loop through all the words.
+"""
+# abc = 'With three words'
+# stuff = abc.split()
+# print(stuff)
+# print(len(stuff))
+# print(stuff[0])
+# for w in stuff:
+#     print(w)
+
+""" 
+1. When you do not specify a delimiter, multiple spaces are treated like one delimiter.
+2. You can specify what delimiter character to use in the splitting.
+"""
+# line = 'A lot               of spaces'
+# etc = line.split()
+# print(etc)
+
+# line = 'first;second;third'
+# thing = line.split()
+# print(thing)
+
+# thing = line.split(';')
+# print(thing)
+# print(len(thing))
+
+# From file
+
+# fhand = open('mbox.txt')
+# for line in fhand:
+#     line = line.rstrip()
+#     if not line.startswith('From ') :
+#         continue
+#     words = line.split()
+#     print(words[2])
+
+# The double split pattern
+""" Sometimes we split a line one way, and then grab one of the pieces of the line and split that piece again """
+
+# List summary
+""" 
+1. Concept of a collection
+2. Lists and definite loops
+3. Indexing and lookup
+4. List mutability
+5. Functions: len, min, max, sum
+6. Slicing lists
+7. List methods: append, remove
+8. Sorting lists
+9. Splitting strings into lists of words
+10. Using split to parse strings.
+"""
