@@ -238,3 +238,6 @@ for line in f_name:
         # print(line)
 print(f"There were {count} lines in the file with From as the first word") 
 """
+friends = [ 'Joseph', 'Glenn', 'Sally' ]
+friends.sort()
+print(friends[0])
