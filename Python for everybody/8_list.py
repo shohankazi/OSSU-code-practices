@@ -110,3 +110,14 @@
 # print(stuff)
 # stuff.append('cookie')
 # print(stuff)
+
+# Is something in a list??
+""" 
+1. Python provides two operators that let you check if an item is in a list
+2. These are logical operators that return True or False
+3. They do not modify the list
+"""
+some = [1,9,21,10,16]
+print(9 in some)
+print(15 in some)
+print(20 not in some)
