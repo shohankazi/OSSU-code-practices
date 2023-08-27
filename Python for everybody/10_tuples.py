@@ -78,3 +78,83 @@ dir(t)
 # (0,1,2000000) < (0,3,4)
 # ('Jones','Sally') < ('Jones','Sam')
 # ('Jones','Sally') > ('Adams','Sam')
+
+
+# Practice Set
+
+""" fname = input('Enter file: ')
+if len(fname) < 1 : fname = 'clown.txt'
+hand = open(fname)
+
+di = dict()
+for lin in hand :
+    lin = lin.rstrip()
+    wds = lin.split()
+    for w in wds:
+        di[w] = di.get(w,0) + 1
+# print(di)
+
+# x = sorted(di.items()) 
+# print(x,'\n')
+# print(x[:5])
+
+temp = list()
+for k,v in di.items() :
+    # print(k,v)
+    new_tuple = (v,k)
+    temp.append(new_tuple)
+# print('flipped',temp)
+
+temp = sorted(temp, reverse=True)
+print('sorted', temp[:5])
+
+for v,k in temp[:5]:
+    print(k,v) 
+"""
+    
+# Exercise 10.2
+
+""" 
+fname = input('Enter file name: ')
+if len(fname) < 1 : fname = 'mbox-short.txt'
+hand = open(fname)
+di = dict()
+for lin in hand :
+    if lin.startswith('From '):
+        wds = lin.split()
+        for w in wds[5:6]:
+            time = w.split(':')
+            for hour in time[:1]:
+                di[hour] = di.get(hour,0) + 1
+                
+for k,v in sorted(di.items()) :
+    print(k,v) 
+"""
+
+    
+    
+    
+    
+    
+    
+    
+#     new_tuple = (k,v)
+#     temp.append(new_tuple)
+# print(sorted(temp))
+
+
+        # print(wds)
+#         lin = lin.rstrip()
+#         wds = lin.split()
+#         for w in wds:
+#             di[w] = di.get(w,0) + 1
+# # print(di)
+
+# temp = list()
+# for k,v in di.items() :
+#     print(k,v)
+#     new_tuple = (v,k)
+#     temp.append(new_tuple)
+# # print('flipped',temp)
+
+

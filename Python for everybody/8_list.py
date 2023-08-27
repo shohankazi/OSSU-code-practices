@@ -227,8 +227,8 @@ print(unique)
 
 # Exercise 8.5
 
-"""
-f_name = open('mbox.txt')
+
+""" f_name = open('mbox-short.txt')
 count = 0 
 for line in f_name:
     if line.startswith('From: ') :
@@ -238,6 +238,7 @@ for line in f_name:
         # print(line)
 print(f"There were {count} lines in the file with From as the first word") 
 """
+
 friends = [ 'Joseph', 'Glenn', 'Sally' ]
 friends.sort()
 print(friends[0])

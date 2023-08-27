@@ -195,6 +195,3 @@ When we encounter a new name, we need to add a new entry in the dictionary and i
 #         big_count = count
 #         big_email = email
 # print(big_email,big_count)
-
-stuff = dict()
-print(stuff.get('candy',-1))
