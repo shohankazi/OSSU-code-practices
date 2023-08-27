@@ -113,8 +113,63 @@ When we encounter a new name, we need to add a new entry in the dictionary and i
 # Simplified counting with get()
 """ We can use get() and provide a default value of zero when the key is not yet in the dictionary - and then just add one """
 
+# counts = dict()
+# names = ['csev','cwen','csev','zqian','cwen']
+# for name in names :
+#     counts[name] = counts.get(name,0) + 1
+# print(counts)
+
+# Counting Pattern
+
+""" The general pattern to count the words in a line of text is to split the line into words, then loop through the words and use a dictionary to track the count of each word independently. """
+
+# counts = dict()
+# print('Enter a line of text: ')
+# line = input('')
+# words = line.split()
+# print('Words:',words)
+# print('Counting...')
+# for word in words:
+#     counts[word] = counts.get(word,0) + 1
+# print('Counts',counts)
+
+# Definite loops and dictionaries
+""" Even though dictionaries are not stored in order, we can write a for loop that goes through all the entries in a dictionary - actually it goes through all of the keys in the dictionary and looks up the values. """
+
+# counts = {'chuck':1,'fred':42,'jan':100}
+# for key in counts:
+#     print(key,counts[key])
+
+# Retrieving lists of Keys and Values
+
+# jjj = {'chuck':1,'fred':42,'jan':100}
+# # print(jjj)
+# print(jjj.keys())
+# print(jjj.values())
+# print(jjj.items())
+
+# Bonus: Two Iteration Variables
+""" 
+1. We loop through the key-value pairs in a dictionary using two iteration values
+2. Each iteration, the first variable is the key and the second variable is the corresponding value for the key.
+"""
+# jjj = {'chuck':1,'fred':42,'jan':100}
+# for k,v in jjj.items():
+#     print(k,v)
+
+name = input('Enter File:')
+handle = open(name)
+
 counts = dict()
-names = ['csev','cwen','csev','zqian','cwen']
-for name in names :
-    counts[name] = counts.get(name,0) + 1
-print(counts)
+for line in handle:
+    words = line.split()
+    for word in words:
+        counts[word] = counts.get(word,0) + 1
+
+bigCount = None
+bigWord = None
+for word,count in counts.items():
+    if bigCount is None or count > bigCount:
+        bigWord = word
+        bigCount = count
+print(bigWord,bigCount)
