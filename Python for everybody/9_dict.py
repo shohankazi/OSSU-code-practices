@@ -53,8 +53,8 @@
     [1] ---- 183
         Dictionary
     Key ------------ Value
-    ['course] ----   182
-    ['age]    ----   21
+    ['course'] ----   182
+    ['age']    ----   21
 """
 
 # Dictionary Literals
@@ -131,7 +131,7 @@ When we encounter a new name, we need to add a new entry in the dictionary and i
 # print('Counting...')
 # for word in words:
 #     counts[word] = counts.get(word,0) + 1
-# print('Counts',counts)
+# print('counts',counts)
 
 # Definite loops and dictionaries
 """ Even though dictionaries are not stored in order, we can write a for loop that goes through all the entries in a dictionary - actually it goes through all of the keys in the dictionary and looks up the values. """
@@ -157,19 +157,41 @@ When we encounter a new name, we need to add a new entry in the dictionary and i
 # for k,v in jjj.items():
 #     print(k,v)
 
-name = input('Enter File:')
-handle = open(name)
+# name = input('Enter File:')
+# handle = open(name)
 
-counts = dict()
-for line in handle:
-    words = line.split()
-    for word in words:
-        counts[word] = counts.get(word,0) + 1
+# counts = dict()
+# for line in handle:
+#     words = line.split()
+#     for word in words:
+#         counts[word] = counts.get(word,0) + 1
 
-bigCount = None
-bigWord = None
-for word,count in counts.items():
-    if bigCount is None or count > bigCount:
-        bigWord = word
-        bigCount = count
-print(bigWord,bigCount)
+# bigCount = None
+# bigWord = None
+# for word,count in counts.items():
+#     if bigCount is None or count > bigCount:
+#         bigWord = word
+#         bigCount = count
+# print(bigWord,bigCount)
+
+
+
+# Exercise 9
+
+# new_file = input('Enter file name: ')
+# f_hand = open('mbox-short.txt')
+# mail_addresses = dict()
+# bigCount = None
+# for text in f_hand:
+#     if text.startswith('From '):
+#         splitted_text = text.split()
+#         mail_sender = splitted_text[1]
+#         mail_addresses[mail_sender] = mail_addresses.get(mail_sender,0) + 1
+
+# big_email = None
+# big_count = None
+# for email,count in mail_addresses.items() :
+#     if big_count is None or count > big_count:
+#         big_count = count
+#         big_email = email
+# print(big_email,big_count)
