@@ -80,16 +80,28 @@ Protocol         host      document
 
 # An HTTP request in python
 
-import socket
+# import socket
 
-mysock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-mysock.connect(('data.pr4e.org',80))
-cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\n\n'.encode()
-mysock.send(cmd)
+# mysock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+# mysock.connect(('data.pr4e.org',80))
+# cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\n\n'.encode()
+# mysock.send(cmd)
 
-while True:
-    data = mysock.recv(512)
-    if (len(data)<1):
-        break
-    print(data.decode())
-mysock.close()
+# while True:
+#     data = mysock.recv(512)
+#     if (len(data)<1):
+#         break
+#     print(data.decode())
+# mysock.close()
+
+""" ASCII = American Standard Code for information Interchange """
+# Representing Simple Strings
+""" 
+1. Each character is represented by a number between 0 and 256 stored in 8 bits of memory.
+2. We refer to 8 bits of memory as a byte of memory.
+3. The ord() function tells us the numeric value of a simple ASCII character.
+"""
+print(ord('H'))
+print(ord('e'))
+print(ord('\n'))
+
