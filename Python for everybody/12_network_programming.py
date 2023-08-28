@@ -101,7 +101,31 @@ Protocol         host      document
 2. We refer to 8 bits of memory as a byte of memory.
 3. The ord() function tells us the numeric value of a simple ASCII character.
 """
-print(ord('H'))
-print(ord('e'))
-print(ord('\n'))
+# print(ord('H'))
+# print(ord('e'))
+# print(ord('\n'))
+
+# Multi-Byte Characters
+""" To represent the wide range of characters computers must handle we represent characters with more than one byte 
+    1. UTF-16 - Fixed length - Two bytes
+    2. UTF-32 - Fixed length - Four bytes
+    3. UTF-8 - 1-4 bytes
+        -> Upwards compatible with ASCII
+        -> Automatic detection between ASCII and UTF-8
+        -> UTF-8 is recommended practice for encoding data to be exchanged between systems.
+==> In Python 3, all strings are Unicode
+"""
+
+# Python3 and Unicode
+""" 
+1. In python 3, all strings internally are Unicode
+2. Working with string variables in python programs and reading data from files usually "just works"
+3. When we talk to a network resource using sockets or talk to a database we have to encode and decode data(usually to UTF-8)
+"""
+
+# Python strings to bytes
+""" 
+1. When we talk to an external resource like a network socket we sends bytes, so we need to encode python 3 strings into a given character encoding
+2. When we read data from an external resource, we must decode it based on the character set so it is properly represented in Python 3 as a string.
+"""
 
