@@ -180,16 +180,16 @@ Protocol         host      document
         1. You could do string searches the hard way 
         2. Or use the free software library called BEautifulSoup from www.crummy.com
 """
-import urllib.request, urllib.parse, urllib.error
-from bs4 import BeautifulSoup
-url = input('Enter - ')
-html = urllib.request.urlopen(url).read()
-soup = BeautifulSoup(html,'html.parser')
+# import urllib.request, urllib.parse, urllib.error
+# from bs4 import BeautifulSoup
+# url = input('Enter - ')
+# html = urllib.request.urlopen(url).read()
+# soup = BeautifulSoup(html,'html.parser')
 
-# Retrieve all of the the anchor tags
-tags = soup('a')
-for tag in tags:
-    print(tag.get('href',None))
+# # Retrieve all of the the anchor tags
+# tags = soup('a')
+# for tag in tags:
+#     print(tag.get('href',None))
     
 # Summary 
 """ 
@@ -198,3 +198,33 @@ for tag in tags:
 3. HyperText Transfer Protocol(HTTP) is a simple yet powerful
 4. Python has good support for sockets, HTTP, and HTML parsing
 """
+# import socket
+
+# mysock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+# mysock.connect(('data.pr4e.org',80))
+# cmd = 'GET http://data.pr4e.org/intro-short.txt HTTP/1.0\n\n'.encode()
+# mysock.send(cmd)
+
+# while True:
+#     data = mysock.recv(512)
+#     if (len(data)<1):
+#         break
+#     print(data.decode())
+# mysock.close()
+
+# Exercise network programming - first
+
+# import socket
+
+# mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# mysock.connect(('data.pr4e.org', 80))
+# cmd = 'GET http://data.pr4e.org/intro-short.txt HTTP/1.0\r\n\r\n'.encode()
+# mysock.send(cmd)
+
+# while True:
+#     data = mysock.recv(512)
+#     if len(data) < 1:
+#         break
+#     print(data.decode(),end='')
+
+# mysock.close()
