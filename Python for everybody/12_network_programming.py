@@ -158,3 +158,43 @@ Protocol         host      document
 # fhand = urllib.request.urlopen('http://www.dr-chuck.com/page1.html')
 # for line in fhand:
 #     print(line.decode().strip())
+
+# What is web scraping?
+""" 
+1. When a program or script pretends to be a browser and retrieves web pages, looks at those web pages, extracts information, and then looks at more web pages.
+2. Search engines scrape web pages - we call this "spidering the web" or "web crawling"
+"""
+# Why scrape?
+""" 
+1. Pull Data - particularly social data - who links to who?
+2. Get your own data back out of some system that has no "export capability"
+3. Monitor a site for new information
+4. Spider the web to make a database for a search engine
+"""
+# Scraping Web Pages
+""" 
+1. There is some controversy about web page scraping and some sites are a bit snippy about it.
+2. Republishing copyrighted information is not allowed
+3. Violating terms of service is not allowed
+    ==> The Easy way - Beautiful Soup
+        1. You could do string searches the hard way 
+        2. Or use the free software library called BEautifulSoup from www.crummy.com
+"""
+import urllib.request, urllib.parse, urllib.error
+from bs4 import BeautifulSoup
+url = input('Enter - ')
+html = urllib.request.urlopen(url).read()
+soup = BeautifulSoup(html,'html.parser')
+
+# Retrieve all of the the anchor tags
+tags = soup('a')
+for tag in tags:
+    print(tag.get('href',None))
+    
+# Summary 
+""" 
+1. The TCP/IP gives us pipes/sockets between applications
+2. We designed application protocols to make use of these pipes
+3. HyperText Transfer Protocol(HTTP) is a simple yet powerful
+4. Python has good support for sockets, HTTP, and HTML parsing
+"""
