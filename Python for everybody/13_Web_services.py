@@ -68,3 +68,38 @@ Describing a "contract" as to what is acceptable XML
 2. It is often called "W3C Schema" because "Schema" is considered generic
 3. More commonly it is called XSD because the file names end in .xsd
 """
+
+# Service oriented approach
+""" 
+1. Most non-trivial web applications use web services
+2. They use services from other applications
+    ==> Credit Card Charge
+    ==> Hotel Reservation systems
+3. Services publish the "rules" applications must follow to make use of the service(API)
+"""
+# Multiple Systems
+""" 
+1. Initially - two systems cooperate and split the problem
+2. As the data/service becomes useful - multiple applications want to use the information/application
+"""
+
+# API = Application Programming Interface
+""" 
+The API itself is largely abstract in that it specifies an interface and controls the behavior of the objects specified in that interface. The software that provides the functionality described by an API is said to be an "implementation" of the API. An API is typically defined in terms of the programming language used to build an application.
+"""
+# API Security and Rate Limiting
+""" 
+1. The compute resources to run these APIs are not "free"
+2. The data provided by these APIs is usually valuable
+3. The data providers might limit the number of requests per day, demand an API "key", or even charge for usage
+4. They might change the rules as things progress...
+"""
+
+# Summary
+""" 
+1. Service Oriented Architecture - allows an application to be broken into parts and distributed across network
+2. An Application program interface (API) is a contract for interaction
+3. Web services provide infrastructure for applications cooperating (an API) over a network - SOAP and REST are two styles of web services
+4. XML and JSON are serialization formats
+
+"""
