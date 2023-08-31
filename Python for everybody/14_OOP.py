@@ -38,3 +38,26 @@ One can have an instance of a class or a particular object. The instance is the 
 """ An object's abilities. In language, methods are verbs. Lassie, being a Dog, has the ability to bark. So bark() is one of Lassie's methods. She may have other methods as well, for example sit() or eat() or walk() or save_timmy(). Within the program, using a method usually affects only one particular object; all Dogs can bark, but you need only one particular dog to do the barking 
 ====>> Method and Message are often used interchangeably. 
 """
+# This is the template for making PartyAnimal objects
+
+class PartyAnimal:
+    x = 0 #Each PartyAnimal object has a bit of data.
+    def party(self):
+        self.x = self.x + 1
+        print("So far",self.x)
+an = PartyAnimal() #Construct a PartyAnimal object and store in an
+an.party() #PartyAnimal.party(an)
+# an.party()
+# an.party()
+print("Type", type(an))
+print("Dir",dir(an)) # We can use dir to find the "capabilities" of our newly created class.
+
+# A nerdy way to find Capabilities
+""" 
+1. The dir() command lists capabilities
+2. Ignore the ones with underscores - these are used by python itself
+3. The rest are real operations that the object can perform
+4. It is like type() - it tells us something "about" a variable 
+"""
+y = 'Hello there' 
+# print(dir(y))
