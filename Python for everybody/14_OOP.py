@@ -40,6 +40,7 @@ One can have an instance of a class or a particular object. The instance is the 
 """
 # This is the template for making PartyAnimal objects
 
+""" 
 class PartyAnimal:
     x = 0 #Each PartyAnimal object has a bit of data.
     def party(self):
@@ -51,7 +52,7 @@ an.party() #PartyAnimal.party(an)
 # an.party()
 print("Type", type(an))
 print("Dir",dir(an)) # We can use dir to find the "capabilities" of our newly created class.
-
+"""
 # A nerdy way to find Capabilities
 """ 
 1. The dir() command lists capabilities
@@ -59,5 +60,59 @@ print("Dir",dir(an)) # We can use dir to find the "capabilities" of our newly cr
 3. The rest are real operations that the object can perform
 4. It is like type() - it tells us something "about" a variable 
 """
-y = 'Hello there' 
+# y = 'Hello there' 
 # print(dir(y))
+
+# Object Lifecycle
+""" 
+1. Objects are created, used and discarded
+2. We have special blocks of code (methods) that get called
+    ==> At the moment of creation(constructor)
+    ==> At the moment of destruction
+3. Constructors are used a lot
+4. Destructors are seldom used
+"""
+# Constructors
+""" 
+1. A primary purpose of the constructor is to set up some instance variables to have the proper initial values when the object is created. The constructor and destructor are optional.
+2. In OOP, a constructor in a class is a special block of statements called when an object is created
+"""
+""" class PartyAnimal:
+    x = 0
+    def __init__(self):
+        print('I am constructed')
+    def party(self):
+        self.x = self.x + 1
+        print('So far',self.x)
+    def __del__(self):
+        print('I am destructed',self.x)
+an = PartyAnimal()
+an.party()
+an.party()
+an = 42
+print('an contains',an) """
+
+""" The constructor is typically used to set up variables. The destructor is seldom used. """
+
+# Many instances
+""" 
+1. We can create lots of objects - the class is the template for the object
+2. We can store each distinct object in its own variable
+3. We can call this having multiple instances of the same class.
+4. Each instance has its own copy of the instance variables.
+"""
+class PartyAnimal:
+    x = 0
+    name = ""
+    def __init__(self,z):
+        self.name = z
+        print(self.name,'constructed')
+    def party(self):
+        self.x = self.x + 1
+        print(self.name,"party count",self.x)
+s = PartyAnimal("sally")
+s.party()
+j = PartyAnimal("Jim")
+j.party()
+s.party()
+""" Constructor can have additional parameters. These can be used to set up instance variables for the particular instance of the class(i.e.,for the particular object) """
