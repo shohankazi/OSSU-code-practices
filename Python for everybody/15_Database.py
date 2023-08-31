@@ -52,3 +52,18 @@ A database model or database schema is the structure or format of a database, de
 2. Many other smaller projects, free and open source
     => HSQL, SQLite, postgres, ...
 """
+#SQL Summary
+
+""" 
+Insert = INSERT INTO Users(name,email) VALUES('Kristin','kf@umich.edu)
+Delete = DELETE FROM Users WHERE email='ted@umich.edu'
+Update = UPDATE Users SET name="Charles" WHERE email="csev@umich.edu"
+Select = SELECT * FROM Users WHERE email='csev@umich.edu'
+SELECT * FROM Users WHERE email='csev@umich.edu'
+SELECT * FROM Users ORDER BY email
+"""
+
+""" 
+1. Tables pretty much look like big fast programmable spreadsheets with rows, columns, and commands
+2. The power comes when we have more than one table and we can exploit the relationships between the tables
+"""
