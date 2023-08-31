@@ -101,5 +101,4 @@ The API itself is largely abstract in that it specifies an interface and control
 2. An Application program interface (API) is a contract for interaction
 3. Web services provide infrastructure for applications cooperating (an API) over a network - SOAP and REST are two styles of web services
 4. XML and JSON are serialization formats
-
 """
