@@ -112,3 +112,39 @@ SELECT * FROM Users ORDER BY email
 1. A foreign key is when a table has a column that contains a key which points to the primary key of another table
 2. When all primary keys are integers, then all foreign keys are integers - this is good - very good
 """
+# Relational Power
+""" 
+1.By removing the replicated data and replacing it with references to a single copy of each bit of data we build a "web" of information that the relational database can read through very quickly - even for very large amounts of data
+2. Often when you want some data it comes from a number of tables linked by these foreign keys
+"""
+# The JOIN Operation
+""" 
+1. The JOIN operation links across several tables as part of a select operation
+2. You must tell the JOIN how to use the keys that make the connection between the tables using an ON clause
+"""
+# Many to Many
+""" 
+1. Sometimes we need to model a relationship that is many-to-many
+2. We need to add a "connection" table with two foreign keys
+3. There is usually no separate primary key
+"""
+
+# Complexity Enables Speed
+""" 
+1. Complexity makes speed possible and allows you to get very fast results as the data size grows
+2. By normalizing the data and linking it with integer keys, the overall amount of data which the relational database must scan is far lower than if the data were simply flattened out
+3. It might seem like a tradeoff - spend some time designing your database so it continues to be fast when your application is a success.
+"""
+# Additional SQL Topics
+""" 
+1. Indexes improve access performance for things like string fields
+2. Constraints on data - (cannot be NULL,etc)
+3. Transactions - allow SQL operations to be grouped and done as a unit
+"""
+# Summary
+""" 
+1. Relational database allow us to scale to very large amounts of data.
+2. The key is to have one copy of any data element and use relations and joins to link the data to multiple places
+3. This greatly reduces the amount of data which much be scanned when doing complex operations across large amounts of data
+4. Database and SQL design is a bit of an art form 
+"""
