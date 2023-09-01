@@ -67,3 +67,24 @@ SELECT * FROM Users ORDER BY email
 1. Tables pretty much look like big fast programmable spreadsheets with rows, columns, and commands
 2. The power comes when we have more than one table and we can exploit the relationships between the tables
 """
+
+# Database Design
+
+""" 
+1. Database Design is an art form of its own with particular skills and experience
+2. Our goal is to avoid the really bad mistakes and design clean and easily understood database
+3. Others may performance tune things later
+4. Database design starts with a picture
+"""
+
+# Building a Data Model
+""" 
+1. Drawing a picture of the data objects for our application and then figuring out how to represent the objects and their relationships
+2. Basic Rule - Don't put the same string data in twice - use a relationship instead
+3. When there is one thing in the "real world" there should be one copy of that in the database
+"""
+# For each "piece of info"
+""" 
+1. Is the column an object or an attribute of another object?
+2. Once we define objects, we need to define the relationships between objects.
+"""
