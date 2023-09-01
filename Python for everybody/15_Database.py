@@ -88,3 +88,27 @@ SELECT * FROM Users ORDER BY email
 1. Is the column an object or an attribute of another object?
 2. Once we define objects, we need to define the relationships between objects.
 """
+# Database Normalization(3NF)
+""" 
+1. There is 'tons' of database theory - way too much to understand without excessive predicate calculus
+2. Do not replicate data - reference data - point at data
+3. Use integers for keys and for references
+4. Add a special "key" column to each table which we will make references to. By convention, many programmers call this column "id"
+"""
+# Three kinds of keys
+""" 
+1. Primary Key - generally an integer auto-increment field
+2. Logical key - What the outside world uses for lookup
+3. Foreign key - generally an integer key pointing to a row in another table
+"""
+# Key RULES
+""" 
+1. Never use your logical key as the primary key
+2. Logical keys can and do change, albeit slowly
+3. Relationships that are based on matching string fields are less efficient than integers
+"""
+# Foreign Keys
+""" 
+1. A foreign key is when a table has a column that contains a key which points to the primary key of another table
+2. When all primary keys are integers, then all foreign keys are integers - this is good - very good
+"""
