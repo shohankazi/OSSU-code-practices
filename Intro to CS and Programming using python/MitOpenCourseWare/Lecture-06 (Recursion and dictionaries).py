@@ -62,3 +62,82 @@ def factorial(n):
 3. must	always index using integers
 4. must	remember to	change multiple lists
 """
+""" 
+DICTIONARY KEYS and VALUES
+
+1.	values		
+    • 	any	type	(immutable	and	mutable)	
+    • 	can	be	duplicates	
+    • 	dictionary	values	can	be	lists,	even	other	dictionaries!
+2.	keys	
+    • 	must	be	unique		
+    • 	immutable	type	(int,	float,	string,	tuple,bool)	
+    •   actually	need	an	object	that	is	hashable,	but	think	of	as	immutable	as	all	immutable	types	are	hashable	
+    • 	careful	with	float	type	as	a	key	
+3.  no	order	to	keys	or	values!	
+d = {4:{1:0}, (1,3):"twelve", 'const':[3.14,2.7,8.44]} 
+"""
+# MEMOIZATION
+""" 
+Memoization is a technique in Python (and in computer science in general) used to optimize the performance of functions by caching, or storing, the results of expensive function calls so that they can be quickly retrieved when needed again. In simple terms, it's like creating a memory or memo for a function to remember its previous calculations.
+
+Here's a basic explanation with an industry-level example:
+
+**Scenario: Calculating Fibonacci Numbers**
+
+Imagine you're building a software program that needs to calculate Fibonacci numbers. Fibonacci numbers are a sequence where each number is the sum of the two preceding ones, like this: 0, 1, 1, 2, 3, 5, 8, 13, and so on.
+
+**Without Memoization:**
+
+If you calculate Fibonacci numbers without memoization, you might end up recalculating the same values multiple times. For example, to find the 5th Fibonacci number, you'd need to calculate the 4th and 3rd Fibonacci numbers, and to calculate the 4th Fibonacci number, you'd need to calculate the 3rd and 2nd Fibonacci numbers. As you can see, there's a lot of redundancy in these calculations.
+
+**With Memoization:**
+
+Now, let's introduce memoization. Instead of recalculating Fibonacci numbers each time, you store the results of previous calculations in a memory (like a dictionary in Python) so that you can reuse them later. Here's how it works:
+
+1. You start by defining a memoization container (e.g., a dictionary) to store calculated Fibonacci numbers.
+
+2. When you need to calculate a Fibonacci number, you first check if it's already in the memoization container.
+
+3. If it's there, you simply return the stored result. If not, you calculate it and store it in the container for future use.
+
+Here's a Python example using memoization to calculate Fibonacci numbers:
+
+```python
+# Memoization container (dictionary)
+fib_cache = {}
+
+def fibonacci(n):
+    if n in fib_cache:
+        return fib_cache[n]
+    
+    if n <= 1:
+        result = n
+    else:
+        result = fibonacci(n - 1) + fibonacci(n - 2)
+    
+    fib_cache[n] = result
+    return result
+
+# Usage
+print(fibonacci(5))  # This will efficiently calculate and print the 5th Fibonacci number.
+```
+
+With memoization, the function stores the results of previously calculated Fibonacci numbers, making it much faster and more efficient, especially for large Fibonacci numbers. This technique is widely used in industry-level applications to optimize functions that involve repetitive calculations.
+"""
+fib = int(input("enter a number "))
+fib_cache = {}
+
+def fibonacci(n):
+    if n in fib_cache:
+        return fib_cache[n]
+    
+    if n <= 1:
+        result = n
+    else:
+        result = fibonacci(n - 1) + fibonacci(n - 2)
+    
+    fib_cache[n] = result
+    return result
+
+print(fibonacci(fib))
