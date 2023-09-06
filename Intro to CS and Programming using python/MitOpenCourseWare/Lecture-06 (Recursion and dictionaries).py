@@ -42,3 +42,10 @@ def factorial(n):
 2. recursion may be	efficient from programmer POV
 3. recursion may not be	efficient from computer	POV
 """
+# DIVIDE AND CONQUER
+""" 
+1. an example of a “divide and conquer”	algorithm	
+2. solve a hard	problem	by breaking	it into	a set of sub-problems such that:	
+    ◦ sub-problems are easier to solve than	the	original	
+    ◦ solutions of the sub-problems can be combined to solve the original
+"""
