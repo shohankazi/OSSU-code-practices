@@ -105,26 +105,6 @@ Here's a Python example using memoization to calculate Fibonacci numbers:
 
 ```python
 # Memoization container (dictionary)
-fib_cache = {}
-
-def fibonacci(n):
-    if n in fib_cache:
-        return fib_cache[n]
-    
-    if n <= 1:
-        result = n
-    else:
-        result = fibonacci(n - 1) + fibonacci(n - 2)
-    
-    fib_cache[n] = result
-    return result
-
-# Usage
-print(fibonacci(5))  # This will efficiently calculate and print the 5th Fibonacci number.
-```
-
-With memoization, the function stores the results of previously calculated Fibonacci numbers, making it much faster and more efficient, especially for large Fibonacci numbers. This technique is widely used in industry-level applications to optimize functions that involve repetitive calculations.
-"""
 fib = int(input("enter a number "))
 fib_cache = {}
 
@@ -141,3 +121,11 @@ def fibonacci(n):
     return result
 
 print(fibonacci(fib))
+
+# Usage
+print(fibonacci(5))  # This will efficiently calculate and print the 5th Fibonacci number.
+```
+
+With memoization, the function stores the results of previously calculated Fibonacci numbers, making it much faster and more efficient, especially for large Fibonacci numbers. This technique is widely used in industry-level applications to optimize functions that involve repetitive calculations.
+"""
+
