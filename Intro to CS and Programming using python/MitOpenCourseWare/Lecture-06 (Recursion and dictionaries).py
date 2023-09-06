@@ -49,3 +49,16 @@ def factorial(n):
     ◦ sub-problems are easier to solve than	the	original	
     ◦ solutions of the sub-problems can be combined to solve the original
 """
+# DICTIONARIES
+""" 
+1. a separate list for each item
+2. each	list must have the same length
+3. info	stored across lists	at same	index, each	index refers to	info for a different person 
+"""
+# HOW TO UPDATE/RETRIEVE STUDENT INFO
+""" 
+1. messy if	have a lot of different	info to	keep track of
+2. must	maintain many lists and	pass them as arguments
+3. must	always index using integers
+4. must	remember to	change multiple lists
+"""
