@@ -194,10 +194,17 @@ to show output from code to a user, use print command
     area = pi * (radius ** 2)
     radius = radius + 1
 """
-usa_gold = 46
-uk_gold = 27
-romania_gold = 1
-total_gold = usa_gold + uk_gold + romania_gold
-print(total_gold)
-romania_gold += 1
-print(total_gold)
+# usa_gold = 46
+# uk_gold = 27
+# romania_gold = 1
+# total_gold = usa_gold + uk_gold + romania_gold
+# print(total_gold)
+# romania_gold += 1
+# print(total_gold)
+count = 0
+for letter in 'Snow!':
+    print('Letter # ' + str(count) + ' is ' + str(letter))
+    count += 1
+    break
+print(count)
+
