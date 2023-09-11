@@ -179,3 +179,10 @@ if abs(guess**2 - x) >= epsilon:
     print('failed')
 else:
     print('succeeded: ' + str(guess)) """
+
+str1 = 'exterminate!' 
+# str1 = str1.replace('e', '*')
+str2 = 'number one - the larch'
+
+# str2 = str2.capitalize()
+print(str1.index('e'))
