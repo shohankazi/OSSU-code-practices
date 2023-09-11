@@ -58,7 +58,7 @@ print('done') """
 
 # Problem 8
 
-school = 'Massachusetts Institute of Technology'
+""" school = 'Massachusetts Institute of Technology'
 numVowels = 0
 numCons = 0
 
@@ -72,4 +72,24 @@ for char in school:
         numCons -= 1
 
 print('numVowels is: ' + str(numVowels))
-print('numCons is: ' + str(numCons))
+print('numCons is: ' + str(numCons)) """
+
+# Problem 9
+
+""" for iteration in range(5):
+    count = 0
+    while True:
+        for letter in "hello, world":
+            count += 1
+        print("Iteration " + str(iteration) + "; count is: " + str(count))
+        break """
+
+# Problem 9
+
+""" iteration = 0
+count = 0
+while iteration < 5:
+    for letter in "hello, world":
+        count += 1
+    print("Iteration " + str(iteration) + "; count is: " + str(count))
+    iteration += 1  """
