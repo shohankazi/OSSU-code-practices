@@ -1,4 +1,0 @@
-Today I have learned these topics:
-1) Strings and Images
-2)Constant Definitions
-3) Function Definitions

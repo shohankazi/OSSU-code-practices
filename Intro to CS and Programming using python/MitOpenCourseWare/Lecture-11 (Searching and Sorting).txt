@@ -178,3 +178,8 @@ print("Sorted array using BogoSort (may take a long time or forever):", my_list)
 
 Keep in mind that BogoSort is not suitable for practical use and is used mostly for educational or humorous purposes. It has an average-case time complexity of O((n+1)!), making it extremely inefficient.
 """
+
+str1 = 'hello'
+str2 = ','
+str3 = 'world'
+print(str3 * 3)
